@@ -1,11 +1,82 @@
 {% extends 'base.html' %}
 {% load i18n %}
+
 {% block content %}
+
+<style>
+    /* ---------- Global Styling ---------- */
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background-color: #f6f7fb;
+        color: #222;
+    }
+
+    h1 {
+        font-size: 42px;
+        text-align: center;
+        margin-top: 50px;
+        font-weight: 700;
+        color: #222;
+    }
+
+    /* ---------- Services Section ---------- */
+
+    .services-container {
+        max-width: 950px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .service-box {
+        background: #fff;
+        padding: 25px 30px;
+        margin-bottom: 25px;
+        border-radius: 18px;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-box:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .service-box p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 0;
+    }
+</style>
+
 <h1>{% trans "Our Services" %}</h1>
-<p>{% trans "We offer multilingual website development tailored to global audiences." %}</p>
-<p>{% trans "Our team creates responsive interfaces that adapt beautifully to all devices." %}</p>
-<p>{% trans "We integrate CMS tools that allow administrators to update content easily." %}</p>
-<p>{% trans "Language management is simple—new languages can be added anytime." %}</p>
-<p>{% trans "We provide translation support using Django's internationalization system." %}</p>
-<p>{% trans "Our goal is to help you expand your digital presence across borders effortlessly." %}</p>
+
+<div class="services-container">
+
+    <div class="service-box">
+        <p>{% trans "We offer multilingual website development tailored to global audiences." %}</p>
+    </div>
+
+    <div class="service-box">
+        <p>{% trans "Our team creates responsive interfaces that adapt beautifully to all devices." %}</p>
+    </div>
+
+    <div class="service-box">
+        <p>{% trans "We integrate CMS tools that allow administrators to update content easily." %}</p>
+    </div>
+
+    <div class="service-box">
+        <p>{% trans "Language management is simple—new languages can be added anytime." %}</p>
+    </div>
+
+    <div class="service-box">
+        <p>{% trans "We provide translation support using Django's internationalization system." %}</p>
+    </div>
+
+    <div class="service-box">
+        <p>{% trans "Our goal is to help you expand your digital presence across borders effortlessly." %}</p>
+    </div>
+
+</div>
+
 {% endblock %}

@@ -31,13 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # 'home.apps.HomeConfig',
+    # 'search.apps.SearchConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
+
+    # Wagtail apps
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
@@ -51,8 +54,8 @@ INSTALLED_APPS = [
     'wagtail',
     'modelcluster',
     'taggit',
-
 ]
+
 
 LANGUAGE_CODE = 'en'
 
@@ -147,3 +150,6 @@ LANGUAGES = [
 ]
 
 LOCALE_PATHS = [BASE_DIR / 'locale']
+
+
+WAGTAILADMIN_BASE_URL = 'http://127.0.0.1:8000'
